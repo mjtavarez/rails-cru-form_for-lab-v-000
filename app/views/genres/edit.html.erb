@@ -1,0 +1,6 @@
+<%= form_tag(genre_path(@genre), method: 'patch') do %>
+    <label>Name:</label><br>
+    <%= text_field_tag :'genre[name]', @genre.name %><br>
+    
+    <%= submit_tag value="Update Genre"%>
+<% end %>
