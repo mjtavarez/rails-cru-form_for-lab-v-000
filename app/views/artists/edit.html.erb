@@ -1,9 +1,7 @@
-<%= form_tag(artist_path(@artist), method: "patch") do %>
-    <label>Name:</label><br>
-    <%= text_field_tag :'artist[name]', @artist.name%><br>
+<%= form_for @artist do |f| %>
+
+    Name: <%= f.text_field :name %><br>
+    Bio: <%= f.text_area :bio %><br>
     
-    <label>Bio:</label><br>
-    <%= text_area_tag :'artist[bio]', @artist.bio %><br>
-    
-    <%= submit_tag value='Update Artist'%>
+    <%=f.submit value="Update Artist"%>
 <% end %>

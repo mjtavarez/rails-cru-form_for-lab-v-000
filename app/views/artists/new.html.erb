@@ -1,9 +1,6 @@
-<%= form_tag artists_path do %>
-    <label>Name:</label><br>
-    <%= text_field_tag :'artist[name]'%><br>
+<%= form_for @artist do |f| %>
+    Name: <%= f.text_field :name %><br>
+    Bio: <%= f.text_area :bio %><br>
     
-    <label>Bio:</label><br>
-    <%= text_area_tag :'artist[bio]' %><br>
-    
-    <%= submit_tag value="Create Artist"%>
+    <%= f.submit value="Create Artist"%>
 <% end %>

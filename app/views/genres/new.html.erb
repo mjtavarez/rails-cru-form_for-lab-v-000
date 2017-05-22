@@ -1,7 +1,5 @@
-<%= form_tag genres_path do %>
-    <label>Name:</label><br>
-    <%= text_field_tag :'genre[name]'%><br>
+<%= form_for @genre do |f| %>
+    Name: <%= f.text_field :name %><br>
     
     <%= submit_tag value="Create Genre"%>
-    
 <% end %>
